@@ -1,7 +1,6 @@
 import "./globals.css";
 import StyledComponentsRegistry from "./lib/registry";
 import { Varela_Round } from "next/font/google";
-import Container from "../../components/Container";
 
 export const metadata = {
   title: "Illustration by Michael Cuccia",
@@ -14,10 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={varelaRound.className}>
-        <StyledComponentsRegistry>
-          {/* <Container>{children}</Container> */}
-          {children}
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
