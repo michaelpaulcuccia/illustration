@@ -1,6 +1,7 @@
+import "./globals.css";
 import StyledComponentsRegistry from "./lib/registry";
 import { Varela_Round } from "next/font/google";
-import "./globals.css";
+import Container from "../../components/Container";
 
 export const metadata = {
   title: "Illustration by Michael Cuccia",
@@ -12,9 +13,12 @@ const varelaRound = Varela_Round({ subsets: ["latin"], weight: "400" });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <StyledComponentsRegistry>
-        <body className={varelaRound.className}>{children}</body>
-      </StyledComponentsRegistry>
+      <body className={varelaRound.className}>
+        <StyledComponentsRegistry>
+          {/* <Container>{children}</Container> */}
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
