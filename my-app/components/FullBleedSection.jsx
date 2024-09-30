@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-const COLORS = {
-  default: "#ffffff",
-  gray: "#264644",
-  blueBlend: "linear-gradient(90deg, #433274 0, #433274 50%, #045da3 100%)",
-};
+import { COLORS } from "../constants";
 
 const StyledFullBleedSection = styled.div`
   width: 100%;
@@ -15,10 +10,10 @@ const StyledFullBleedSection = styled.div`
       ? COLORS.gray
       : bgColor === "blueBlend"
       ? COLORS.blueBlend
-      : COLORS.default};
+      : COLORS.white};
 `;
 
-export default function FullBleedSection({ bgColor = "default", children }) {
+export default function FullBleedSection({ bgColor = "white", children }) {
   return (
     <StyledFullBleedSection bgColor={bgColor}>
       {children}
