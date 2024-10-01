@@ -35,23 +35,20 @@ const RadioButton = styled.button`
 const Carousel = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Function to handle button clicks
   const handleButtonClick = (index) => {
     setActiveIndex(index);
   };
 
-  // Automatic slide transition every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 8000);
+    }, 10000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [items.length]);
+    return () => clearInterval(interval);
+  }, [items.length, handleButtonClick]);
 
   return (
     <CarouselWrapper>
-      {/* Display the active FullImageContainer */}
       {items.map((item, index) =>
         index === activeIndex ? (
           <FullImageContainer
@@ -64,7 +61,6 @@ const Carousel = ({ items }) => {
         ) : null
       )}
 
-      {/* Radio-like Buttons */}
       <RadioButtonsContainer>
         {items.map((_, index) => (
           <RadioButton

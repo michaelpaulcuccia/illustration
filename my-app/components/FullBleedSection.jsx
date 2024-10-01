@@ -24,10 +24,19 @@ const ContentWrapper = styled.div`
       : COLORS.white};
 `;
 
+const TextContainer = styled.div`
+  color: ${({ bgColor }) =>
+    bgColor === "gray" || bgColor === "blueBlend"
+      ? COLORS.white
+      : COLORS.black};
+`;
+
 export default function FullBleedSection({ bgColor = "white", children }) {
   return (
     <StyledFullBleedSection bgColor={bgColor}>
-      <ContentWrapper bgColor={bgColor}>{children}</ContentWrapper>
+      <ContentWrapper bgColor={bgColor}>
+        <TextContainer bgColor={bgColor}>{children}</TextContainer>
+      </ContentWrapper>
     </StyledFullBleedSection>
   );
 }

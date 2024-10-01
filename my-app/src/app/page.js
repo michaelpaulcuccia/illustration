@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import FullBleedSection from "../../components/FullBleedSection";
-import FullImageContainer from "../../components/FullImageContainer";
 import Carousel from "../../components/Carousel";
 
 const items = [
@@ -28,15 +27,6 @@ const items = [
 export default function Layout() {
   return (
     <>
-      {/* <FullBleedSection bgColor="blueBlend">
-        <FullImageContainer
-          image="/images/servers.jpg"
-          headline="This is an Overlay Text"
-          subHead="With a subheadline text"
-          href="/newPage"
-        />
-      </FullBleedSection> */}
-
       <FullBleedSection bgColor="blueBlend">
         <Carousel items={items} />
       </FullBleedSection>

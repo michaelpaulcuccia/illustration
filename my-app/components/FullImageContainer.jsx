@@ -27,19 +27,21 @@ const TextOverlay = styled.div`
   z-index: 1;
 
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0;
+    letter-spacing: 1.25px;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     margin: 10px 0;
+    letter-spacing: 0.75px;
   }
 
   button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.2rem;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
