@@ -13,10 +13,21 @@ const StyledFullBleedSection = styled.div`
       : COLORS.white};
 `;
 
+const ContentWrapper = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
+  background: ${({ bgColor }) =>
+    bgColor === "gray"
+      ? COLORS.gray
+      : bgColor === "blueBlend"
+      ? COLORS.blueBlend
+      : COLORS.white};
+`;
+
 export default function FullBleedSection({ bgColor = "white", children }) {
   return (
     <StyledFullBleedSection bgColor={bgColor}>
-      {children}
+      <ContentWrapper bgColor={bgColor}>{children}</ContentWrapper>
     </StyledFullBleedSection>
   );
 }

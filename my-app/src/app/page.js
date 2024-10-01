@@ -1,57 +1,50 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import FullBleedSection from "../../components/FullBleedSection";
-import ContentWrapper from "../../components/ContentWrapper";
-import styled from "styled-components";
+import FullImageContainer from "../../components/FullImageContainer";
+import Carousel from "../../components/Carousel";
 
-const ImageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 800px;
-`;
-
-const TextOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  pointer-events: none;
-  z-index: 1;
-`;
+const items = [
+  {
+    image: "/images/servers.jpg",
+    headline: "This is an Overlay Text",
+    subHead: "With a subheadline text",
+    href: "/newPage",
+  },
+  {
+    image: "/images/blueblocks.jpg",
+    headline: "Another Overlay Text",
+    subHead: "With some other text",
+    href: "/otherPage",
+  },
+  {
+    image: "/images/chip.png",
+    headline: "Chip Overlay Text",
+    subHead: "A new subheadline text",
+    href: "/chipPage",
+  },
+];
 
 export default function Layout() {
   return (
     <>
+      {/* <FullBleedSection bgColor="blueBlend">
+        <FullImageContainer
+          image="/images/servers.jpg"
+          headline="This is an Overlay Text"
+          subHead="With a subheadline text"
+          href="/newPage"
+        />
+      </FullBleedSection> */}
+
       <FullBleedSection bgColor="blueBlend">
-        <ContentWrapper>
-          <ImageContainer>
-            <Image
-              src="/images/servers.jpg"
-              alt="Servers"
-              layout="fill"
-              objectFit="cover"
-            />
-            <TextOverlay>This is an Overlay Text</TextOverlay>
-          </ImageContainer>
-        </ContentWrapper>
+        <Carousel items={items} />
       </FullBleedSection>
 
-      <FullBleedSection>
-        <ContentWrapper>White</ContentWrapper>
-      </FullBleedSection>
+      <FullBleedSection>White</FullBleedSection>
 
-      <FullBleedSection bgColor="gray">
-        <ContentWrapper>Gray</ContentWrapper>
-      </FullBleedSection>
+      <FullBleedSection bgColor="gray">Gray</FullBleedSection>
+      <FullBleedSection bgColor="blueBlend">Blue Blend</FullBleedSection>
     </>
   );
 }
