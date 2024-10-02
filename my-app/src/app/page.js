@@ -27,14 +27,14 @@ const items = [
 export default function Layout() {
   return (
     <>
-      <FullBleedSection bgColor="blueBlend">
+      <FullBleedSection bgcolor="blueBlend">
         <Carousel items={items} />
       </FullBleedSection>
 
       <FullBleedSection>White</FullBleedSection>
 
-      <FullBleedSection bgColor="gray">Gray</FullBleedSection>
-      <FullBleedSection bgColor="blueBlend">Blue Blend</FullBleedSection>
+      <FullBleedSection bgcolor="gray">Gray</FullBleedSection>
+      <FullBleedSection bgcolor="blueBlend">Blue Blend</FullBleedSection>
     </>
   );
 }

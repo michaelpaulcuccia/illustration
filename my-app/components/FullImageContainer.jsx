@@ -57,7 +57,13 @@ const TextOverlay = styled.div`
 
 const FullImageContainer = ({ image, headline, subHead, href }) => (
   <ImageContainerWrapper>
-    <Image src={image} alt={headline} layout="fill" objectFit="cover" />
+    <Image
+      src={image}
+      alt={headline}
+      layout="fill"
+      objectFit="cover"
+      priority
+    />
     <TextOverlay>
       {headline && <h1>{headline}</h1>}
       {subHead && <h2>{subHead}</h2>}

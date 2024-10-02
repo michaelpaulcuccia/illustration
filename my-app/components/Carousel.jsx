@@ -22,13 +22,16 @@ const RadioButton = styled.button`
   height: 20px;
   border-radius: 50%;
   border: 2px solid white;
-  background-color: ${({ isActive }) => (isActive ? "white" : "transparent")};
+  background-color: transparent;
   transition: background-color 0.3s ease;
   cursor: pointer;
 
+  &.active {
+    background-color: white;
+  }
+
   &:hover {
-    background-color: ${({ isActive }) =>
-      isActive ? "white" : "rgba(255, 255, 255, 0.5)"};
+    background-color: rgba(255, 255, 255, 0.5);
   }
 `;
 
@@ -45,7 +48,7 @@ const Carousel = ({ items }) => {
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [items.length, handleButtonClick]);
+  }, [items.length]);
 
   return (
     <CarouselWrapper>
@@ -65,7 +68,7 @@ const Carousel = ({ items }) => {
         {items.map((_, index) => (
           <RadioButton
             key={index}
-            isActive={index === activeIndex}
+            className={index === activeIndex ? "active" : ""}
             onClick={() => handleButtonClick(index)}
           />
         ))}
