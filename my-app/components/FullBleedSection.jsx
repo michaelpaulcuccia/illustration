@@ -10,6 +10,8 @@ const StyledFullBleedSection = styled.div`
       ? COLORS.gray
       : $bgcolor === "blueBlend"
       ? COLORS.blueBlend
+      : $bgcolor === "coal"
+      ? COLORS.coal
       : COLORS.white};
 `;
 
@@ -21,14 +23,16 @@ const ContentWrapper = styled.div`
       ? COLORS.gray
       : $bgcolor === "blueBlend"
       ? COLORS.blueBlend
+      : $bgcolor === "coal"
+      ? COLORS.coal
       : COLORS.white};
 `;
 
 const TextContainer = styled.div`
   color: ${({ $bgcolor }) =>
-    $bgcolor === "gray" || $bgcolor === "blueBlend"
+    $bgcolor === "gray" || $bgcolor === "blueBlend" || $bgcolor === "coal"
       ? COLORS.white
-      : COLORS.black};
+      : COLORS.coal};
 `;
 
 export default function FullBleedSection({ bgcolor = "white", children }) {

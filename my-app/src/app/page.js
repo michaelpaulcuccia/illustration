@@ -5,7 +5,7 @@ import Carousel from "../../components/Carousel";
 
 const items = [
   {
-    image: "/images/servers.jpg",
+    image: "/images/abstract.jpg",
     headline: "This is an Overlay Text",
     subHead: "With a subheadline text",
     href: "/newPage",
@@ -17,7 +17,7 @@ const items = [
     href: "/otherPage",
   },
   {
-    image: "/images/chip.png",
+    image: "/images/particle.jpg",
     headline: "Chip Overlay Text",
     subHead: "A new subheadline text",
     href: "/chipPage",
@@ -27,7 +27,7 @@ const items = [
 export default function Layout() {
   return (
     <>
-      <FullBleedSection bgcolor="blueBlend">
+      <FullBleedSection bgcolor="coal">
         <Carousel items={items} />
       </FullBleedSection>
 
