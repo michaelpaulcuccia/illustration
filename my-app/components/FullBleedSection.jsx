@@ -14,7 +14,7 @@ const StyledFullBleedSection = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   background: ${({ $bgcolor }) =>
     $bgcolor === "gray"
