@@ -43,7 +43,7 @@ const TextOverlay = styled.div`
     padding: 15px 25px;
     font-size: 1.2rem;
     background-color: #007aff;
-    color: #ffffff; /* White text */
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
